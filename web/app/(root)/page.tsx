@@ -1,11 +1,13 @@
-import { Button } from "@/components/ui/button";
+import React from 'react'
+import { UserButton } from '@clerk/nextjs'
+type Props = {}
 
-export default function Home() {
+const SetupPage = (props: Props) => {
   return (
-    <main>
-      <div className="p-4" >
-        <Button> Click Me</Button>
-      </div>
-    </main>
-  );
+    <div>
+              <UserButton afterSwitchSessionUrl='/' />
+    </div>
+  )
 }
+
+export default SetupPage
